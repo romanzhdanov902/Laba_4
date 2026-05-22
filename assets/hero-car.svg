@@ -1,0 +1,13 @@
+<svg width="860" height="460" viewBox="0 0 860 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="860" height="460" rx="28" fill="#F8F2E8"/>
+  <rect x="72" y="285" width="678" height="48" rx="24" fill="#11141A" fill-opacity="0.08"/>
+  <path d="M188 240C214 176 276 142 380 142H470C560 142 623 176 656 239L702 253C721 259 734 275 734 295V316H142V288C142 269 154 252 172 246L188 240Z" fill="#1B1F27"/>
+  <path d="M282 160H474C534 160 575 182 609 231H225C240 186 259 160 282 160Z" fill="#F0B74A"/>
+  <circle cx="253" cy="317" r="53" fill="#11141A"/>
+  <circle cx="253" cy="317" r="24" fill="#F8F2E8"/>
+  <circle cx="616" cy="317" r="53" fill="#11141A"/>
+  <circle cx="616" cy="317" r="24" fill="#F8F2E8"/>
+  <rect x="340" y="174" width="114" height="54" rx="10" fill="#F8F2E8" fill-opacity="0.86"/>
+  <rect x="463" y="174" width="104" height="54" rx="10" fill="#F8F2E8" fill-opacity="0.76"/>
+  <text x="74" y="78" fill="#11141A" font-size="38" font-family="Arial, Helvetica, sans-serif" font-weight="700">Retro style. Timeless drive.</text>
+</svg>

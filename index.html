@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+        <meta charset="UTF-8">
+
+        <!-- Аналитика -->
+        <script>
+            console.log("Аналитика подключена");
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ретро автомобили — главная</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <div class="site-shell">
+        <!-- Шапка сайта с логотипом, навигацией и кнопкой входа -->
+        <header class="site-header">
+            <div class="d-flex align-items-center">
+                <!-- Логотип сайта -->
+                <div class="logo-box">
+                    <a href="index.html"><img src="assets/logo.svg" alt="Логотип Ретро автомобили"></a>
+                </div>
+
+                <!-- Основное меню -->
+                <nav class="main-nav navbar navbar-expand-lg">
+                    <div class="container-fluid justify-content-center">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Переключить навигацию">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
+                            <ul class="navbar-nav gap-lg-3 align-items-lg-center">
+                                <li class="nav-item"><a class="nav-link active" href="index.html">Объявления</a></li>
+                                <li class="nav-item"><a class="nav-link " href="catalog.html">Каталог</a></li>
+                                <li class="nav-item"><a class="nav-link " href="dealers.html">Дилеры</a></li>
+                                <li class="nav-item"><a class="nav-link " href="reviews.html">Отзывы</a></li>
+                                <li class="nav-item"><a class="nav-link " href="form.html">Подписка</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+
+                <!-- Кнопка входа -->
+                <div class="login-box">
+                    <a class="login-btn btn" href="login.html">Войти</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Основное содержимое главной страницы -->
+        <main class="page-inner">
+            <!-- Хлебные крошки -->
+            <div class="breadcrumb-box">Домашняя страница &nbsp;›&nbsp; Объявления &nbsp;›&nbsp; Горячие предложения</div>
+
+            <!-- Заголовок страницы -->
+            <div class="title-box">
+                <h1>Горячие предложения</h1>
+            </div>
+
+            <!-- Главный баннер с акционным автомобилем -->
+            <section class="text-center">
+                <a href="detail.html?car=impala"><img class="hero-main" src="assets/hero-main.jpg" alt="Главное предложение Chevrolet Impala"></a>
+                <div class="carousel-dots">•◦◦</div>
+
+                <!-- Миниатюры популярных автомобилей -->
+                <div class="thumb-row">
+                    <a href="detail.html?car=belair"><img src="assets/thumb-1.jpg" alt="Chevrolet Bel Air"></a>
+                    <a href="detail.html?car=cobra"><img src="assets/thumb-2.jpg" alt="Ретро родстер Cobra"></a>
+                    <a href="detail.html?car=figaro"><img src="assets/thumb-3.jpg" alt="Nissan Figaro"></a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Футер сайта -->
+        <footer class="footer-note">
+            <p>© 2026 Ретро автомобили. Каталог классических машин, объявления и подписка на новые поступления.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

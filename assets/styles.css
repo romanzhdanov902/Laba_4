@@ -1,0 +1,517 @@
+:root {
+  --bg-page: #ececec;
+  --bg-panel: #f7f4ee;
+  --bg-soft: #f0ece4;
+  --bg-card: #efe7d0;
+  --text-main: #111111;
+  --text-muted: #6a6a6a;
+  --border-dark: #191919;
+  --accent: #b58b43;
+}
+
+body {
+  background: var(--bg-page);
+  color: var(--text-main);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.site-shell {
+  max-width: 1240px;
+  margin: 24px auto;
+  background: var(--bg-panel);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.03);
+}
+
+.site-header {
+  background: #f3efe7;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.logo-box {
+  width: 150px;
+  min-width: 150px;
+  height: 100px;
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-box img {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  opacity: 0.65;
+}
+
+.main-nav {
+  flex: 1;
+}
+
+.main-nav .nav-link {
+  color: var(--text-main);
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.75rem 1rem;
+  font-size: 1.05rem;
+}
+
+.main-nav .nav-link:hover,
+.main-nav .nav-link.active {
+  color: #000;
+}
+
+.login-box {
+  width: 220px;
+  min-width: 220px;
+  height: 100px;
+  border-left: 4px solid var(--border-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-btn {
+  border: 3px solid var(--border-dark);
+  border-radius: 999px;
+  padding: 0.35rem 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: #fffefb;
+  color: var(--text-main);
+}
+
+.login-btn:hover {
+  background: #191919;
+  color: #fffefb;
+}
+
+.page-inner {
+  padding: 16px 38px 28px;
+}
+
+.breadcrumb-box,
+.title-box,
+.description-toggle {
+  background: var(--bg-soft);
+  border-radius: 8px;
+}
+
+.breadcrumb-box {
+  max-width: 580px;
+  margin: 10px auto 8px;
+  padding: 6px 14px;
+  font-size: 0.72rem;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.title-box {
+  max-width: 580px;
+  margin: 0 auto 18px;
+  padding: 6px 14px;
+  text-align: center;
+}
+
+.title-box h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero-main,
+.detail-image {
+  display: block;
+  width: 100%;
+  max-width: 544px;
+  margin: 0 auto;
+}
+
+.detail-image {
+  max-width: 543px;
+  margin-bottom: 14px;
+  border-radius: 20px;
+}
+
+.carousel-dots {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #7d7d7d;
+  line-height: 1;
+  margin: 8px 0 12px;
+}
+
+.thumb-row {
+  display: flex;
+  gap: 38px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.thumb-row a {
+  display: inline-block;
+}
+
+.thumb-row img {
+  width: 156px;
+  height: 103px;
+  object-fit: cover;
+}
+
+.catalog-panel,
+.detail-panel,
+.form-panel,
+.login-panel {
+  background: rgba(235, 231, 223, 0.75);
+  border-radius: 10px;
+  padding: 26px;
+}
+
+/* Сетка каталога с одинаковой высотой карточек */
+.catalog-grid {
+  row-gap: 24px;
+}
+
+.catalog-card {
+  height: 100%;
+  border: 0;
+  border-radius: 26px;
+  overflow: hidden;
+  background: #faf7f1;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.catalog-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+.catalog-image-wrap {
+  height: 220px;
+  overflow: hidden;
+  background: #ddd6c8;
+}
+
+.catalog-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.catalog-card .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 220px;
+  padding: 24px;
+  background: var(--bg-card);
+}
+
+.catalog-card .card-title,
+.car-title,
+.car-price,
+.detail-spec {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.catalog-card .card-title {
+  text-align: center;
+  font-size: 1.25rem;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.catalog-card .car-meta {
+  text-align: center;
+  font-weight: 800;
+  color: #534d44;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.catalog-card .car-price {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.catalog-card .stars {
+  text-align: center;
+  margin: 0;
+}
+
+.catalog-card .btn {
+  margin-top: auto;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 999px;
+}
+
+.detail-info,
+.info-card {
+  background: var(--bg-card);
+}
+
+.detail-info {
+  border-radius: 28px;
+  min-height: 112px;
+  padding: 22px 32px 14px;
+  max-width: 535px;
+  margin: 0 auto;
+}
+
+.car-title {
+  font-size: 1.45rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.car-price,
+.detail-spec {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.stars {
+  color: #d3b316;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 0 #555;
+  line-height: 1;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 14px;
+  align-items: center;
+}
+
+.detail-left .car-title,
+.detail-left .detail-spec,
+.detail-right .car-price {
+  text-align: left;
+}
+
+.description-toggle {
+  max-width: 350px;
+  margin: 28px auto 0;
+  padding: 8px 16px;
+  text-align: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-panel,
+.login-panel {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 30px 42px 28px;
+}
+
+.form-label-custom {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.form-control,
+.form-select {
+  border-radius: 14px;
+  border: 1px solid #d2ccc3;
+  font-weight: 700;
+  padding: 0.75rem 0.95rem;
+  background: #fffefb;
+}
+
+.form-control:focus,
+.form-check-input:focus,
+.plan-option .form-check-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.2rem rgba(181, 139, 67, 0.18);
+}
+
+/* Улучшенный выбор подписки */
+.plan-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.plan-option {
+  position: relative;
+  border: 1px solid #d9d2c7;
+  border-radius: 18px;
+  background: #fffefb;
+  padding: 16px 18px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.plan-option:hover {
+  transform: translateY(-2px);
+  border-color: #c3a56e;
+}
+
+.plan-option .form-check-input {
+  position: absolute;
+  right: 18px;
+  top: 20px;
+}
+
+.plan-option .form-check-label {
+  display: block;
+  padding-right: 32px;
+  cursor: pointer;
+}
+
+.plan-title {
+  display: block;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+  font-size: 0.95rem;
+}
+
+.plan-text,
+.helper-text {
+  color: #5c564d;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.plan-option:has(.form-check-input:checked) {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(181, 139, 67, 0.16);
+  background: #fffaf0;
+}
+
+.form-check-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.submit-btn {
+  border-radius: 999px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.7rem 2rem;
+}
+
+.login-panel .helper-text {
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.login-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.footer-note {
+  padding: 18px 38px 28px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.footer-note p {
+  margin: 0;
+}
+
+.link-card {
+  color: inherit;
+}
+
+.info-card {
+  border-radius: 24px;
+  padding: 24px;
+  min-height: 100%;
+}
+
+.info-card h3 {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 991px) {
+  .site-shell {
+    margin: 0;
+  }
+
+  .site-header .d-flex {
+    flex-direction: column;
+  }
+
+  .logo-box,
+  .login-box {
+    width: 100%;
+    min-width: 100%;
+    border-left: 0;
+    border-right: 0;
+    height: auto;
+    padding: 12px 0;
+  }
+
+  .main-nav {
+    width: 100%;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-left .car-title,
+  .detail-left .detail-spec,
+  .detail-right .car-price {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-inner {
+    padding: 16px 18px 24px;
+  }
+
+  .form-panel,
+  .login-panel,
+  .catalog-panel,
+  .detail-panel {
+    padding: 20px 16px;
+  }
+
+  .title-box h1 {
+    font-size: 1.45rem;
+  }
+
+  .catalog-image-wrap {
+    height: 180px;
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ретро автомобили — вход</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <div class="site-shell">
+        <!-- Шапка сайта -->
+        <header class="site-header">
+            <div class="d-flex align-items-center">
+                <div class="logo-box">
+                    <a href="index.html"><img src="assets/logo.svg" alt="Логотип Ретро автомобили"></a>
+                </div>
+
+                <!-- Основное меню -->
+                <nav class="main-nav navbar navbar-expand-lg">
+                    <div class="container-fluid justify-content-center">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#loginMenu" aria-controls="loginMenu" aria-expanded="false" aria-label="Переключить навигацию">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center" id="loginMenu">
+                            <ul class="navbar-nav gap-lg-3 align-items-lg-center">
+                                <li class="nav-item"><a class="nav-link" href="index.html">Объявления</a></li>
+                                <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+                                <li class="nav-item"><a class="nav-link" href="dealers.html">Дилеры</a></li>
+                                <li class="nav-item"><a class="nav-link" href="reviews.html">Отзывы</a></li>
+                                <li class="nav-item"><a class="nav-link" href="form.html">Подписка</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="login-box"><a class="login-btn btn" href="login.html">Войти</a></div>
+            </div>
+        </header>
+
+        <!-- Страница входа -->
+        <main class="page-inner">
+            <div class="breadcrumb-box">Домашняя страница &nbsp;›&nbsp; Войти &nbsp;›&nbsp; Авторизация</div>
+
+            <div class="title-box">
+                <h1>Вход в личный кабинет</h1>
+            </div>
+
+            <section class="login-panel">
+                <p class="helper-text">Авторизуйтесь, чтобы сохранить избранные автомобили, подписки и историю обращений к дилерам.</p>
+
+                <!-- Форма входа -->
+                <form class="needs-validation" id="loginForm" novalidate>
+                    <div class="mb-3">
+                        <label class="form-label-custom" for="loginEmail">Почта</label>
+                        <input class="form-control" id="loginEmail" type="email" placeholder="name@example.com" required>
+                        <div class="invalid-feedback">Введите электронную почту.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label-custom" for="loginPassword">Пароль</label>
+                        <input class="form-control" id="loginPassword" type="password" placeholder="Введите пароль" required>
+                        <div class="invalid-feedback">Введите пароль.</div>
+                    </div>
+
+                    <div class="form-check mb-4">
+                        <input class="form-check-input" type="checkbox" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Запомнить меня на этом устройстве</label>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-dark submit-btn" type="submit">Войти</button>
+                        <a class="btn btn-outline-dark submit-btn" href="form.html">Зарегистрироваться</a>
+                    </div>
+
+                    <div class="login-links">
+                        <a href="form.html">Оформить подписку</a>
+                        <a href="catalog.html">Вернуться в каталог</a>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer class="footer-note">
+            <p>© 2026 Ретро автомобили. Авторизация пользователей для доступа к избранному и подпискам.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Простая клиентская проверка формы с Bootstrap
+        (() => {
+            const forms = document.querySelectorAll('.needs-validation');
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        })();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
